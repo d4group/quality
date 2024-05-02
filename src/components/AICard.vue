@@ -13,13 +13,13 @@
       ></v-progress-linear>
     </template>
 
-	<template>
+
 		<v-img
-			height="250"
 			src="./images/AIcard.png"
+			height="250"
 			cover
 		></v-img>
-	</template>
+
 
 
     <v-card-item>
