@@ -37,9 +37,8 @@
     </v-card-item>
 
     <v-card-text>
-      AI is a technology that can be used to solve problems.
-      It is a way of thinking that is based on the idea of
-      "thinking like a computer".
+		<p><b>Sztuczna Inteligencja (AI)</b> to technologia, która naśladuje ludzkie procesy myślowe. AI może uczyć się, analizować dane i podejmować decyzje. Wdrożenie AI w firmie może przynieść wiele korzyści. Oferujemy kompleksowe rozwiązania AI, które mogą pomóc w automatyzacji procesów, poprawie efektywności i zwiększeniu zysków. 
+		Nasza oferta obejmuje personalizację usług, analizę danych klienta i prognozowanie trendów. Zapewniamy pełne wsparcie techniczne i szkolenia dla pracowników. Wejdź do świata AI, ale tylko z przewodnikiem takim jak my.</p>
     </v-card-text>
 
     <v-card-actions>
