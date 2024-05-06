@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar extension-height="70" extended>
+  <v-toolbar>
     <v-toolbar-title>
       <v-btn size="x-large" to="/">
         <img src="../assets/logod4.png" height="60" />
@@ -12,14 +12,14 @@
       <v-icon :icon="darkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night'">
 	  </v-icon>
     </v-btn>
-    <v-btn icon>
+    <!-- <v-btn icon>
       <v-icon color="error">mdi-heart</v-icon>
     </v-btn>
 
     <v-btn icon>
       <v-icon>mdi-dots-vertical</v-icon>
     </v-btn>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
   </v-toolbar>
 </template>
 

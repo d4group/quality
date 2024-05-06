@@ -3,26 +3,28 @@
     <ToolBar />
     <v-main>
       <HelloWorld />
-      <v-container fluid>
-        <v-row>
-          <News />
+      <v-container>
+        <v-row justify="center">
+			<v-col cols="12" xs="12" md="12" xl="12">
+				<News />
+			</v-col>
         </v-row>
         <v-row justify="center">
-          <v-col cols="4" md="3">
+		  <v-col xs="12" md="6" xl="3">
             <AICard />
           </v-col>
-          <v-col cols="4" md="3">
+          <v-col xs="12" md="6" xl="3">
             <EnglishCard />
           </v-col>
-          <v-col cols="4" md="3">
+          <v-col xs="12" md="6" xl="3">
             <ItCard />
           </v-col>
-          <v-col cols="4" md="3">
+          <v-col xs="12" md="6" xl="3">
             <CoursesCard />
           </v-col>
         </v-row>
         <v-row justify="center">
-          <v-col cols="12" md="4">
+			<v-col xs="12" md="12" xl="12">
             <h1>Proszę o kontakt</h1>
             <ContactForm />
           </v-col>

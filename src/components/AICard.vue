@@ -37,32 +37,17 @@
     </v-card-item>
 
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-        <v-rating
-          :model-value="4.5"
-          color="amber"
-          density="compact"
-          size="small"
-          half-increments
-          readonly
-        ></v-rating>
-
-        <div class="text-grey ms-4">
-          4.5 (413)
-        </div>
-      </v-row>
+		<p><b>Sztuczna Inteligencja (AI)</b> to technologia, która naśladuje ludzkie procesy myślowe. AI może uczyć się, analizować dane i podejmować decyzje. Wdrożenie AI w firmie może przynieść wiele korzyści. Oferujemy kompleksowe rozwiązania AI, które mogą pomóc w automatyzacji procesów, poprawie efektywności i zwiększeniu zysków. 
+		Nasza oferta obejmuje personalizację usług, analizę danych klienta i prognozowanie trendów. Zapewniamy pełne wsparcie techniczne i szkolenia dla pracowników. Wejdź do świata AI, ale tylko z przewodnikiem takim jak my.</p>
     </v-card-text>
 
     <v-card-actions>
       <v-btn
         color="deep-purple-lighten-2"
         variant="text"
-        @click="reserve"
+        @click="more"
       >
-        Reserve
+        More
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -76,7 +61,7 @@ export default {
   }),
 
   methods: {
-    reserve() {
+    more() {
       this.loading = true;
 
       setTimeout(() => (this.loading = false), 2000);
