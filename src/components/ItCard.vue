@@ -34,54 +34,21 @@
 	  </v-card-item>
   
 	  <v-card-text>
-		<v-row
-		  align="center"
-		  class="mx-0"
-		>
-		  <v-rating
-			:model-value="4.5"
-			color="amber"
-			density="compact"
-			size="small"
-			half-increments
-			readonly
-		  ></v-rating>
-  
-		  <div class="text-grey ms-4">
-			4.5 (413)
-		  </div>
-		</v-row>
-  
-		<div class="my-4 text-subtitle-1">
-		  $ • Italian, Cafe
-		</div>
-  
-		<div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+	  
+		<div>Zapraszamy do skorzystania z naszych usług IT! Oferujemy szeroki zakres usług, od zarządzania infrastrukturą IT, przez rozwój oprogramowania, po bezpieczeństwo sieciowe. Nasz zespół składa się z doświadczonych specjalistów, którzy są gotowi pomóc Ci zrealizować Twoje cele technologiczne. Nasze usługi IT są dostosowane do Twoich indywidualnych potrzeb, aby pomóc Ci osiągnąć maksymalną wydajność i efektywność. Skontaktuj się z nami już dziś, aby dowiedzieć się więcej i zacząć swoją podróż w świecie technologii!</div>
 	  </v-card-text>
   
 	  <v-divider class="mx-4 mb-1"></v-divider>
   
-	  <v-card-title>Tonight's availability</v-card-title>
-  
-	  <div class="px-4">
-		<v-chip-group v-model="selection">
-		  <v-chip>5:30PM</v-chip>
-  
-		  <v-chip>7:30PM</v-chip>
-  
-		  <v-chip>8:00PM</v-chip>
-  
-		  <v-chip>9:00PM</v-chip>
-		</v-chip-group>
-	  </div>
+	 
   
 	  <v-card-actions>
 		<v-btn
 		  color="deep-purple-lighten-2"
 		  variant="text"
-		  @click="reserve"
+		  @click="more"
 		>
-		  Reserve
+		  More
 		</v-btn>
 	  </v-card-actions>
 	</v-card>
@@ -94,7 +61,7 @@
 	  }),
   
 	  methods: {
-		reserve () {
+		more () {
 		  this.loading = true
   
 		  setTimeout(() => (this.loading = false), 2000)

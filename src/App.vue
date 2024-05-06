@@ -4,8 +4,10 @@
     <v-main>
       <HelloWorld />
       <v-container fluid>
-        <v-row>
-          <News />
+        <v-row justify="center">
+			<v-col cols="12" md="12">
+				<News />
+			</v-col>
         </v-row>
         <v-row justify="center">
           <v-col cols="4" md="3">

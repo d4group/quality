@@ -37,32 +37,18 @@
     </v-card-item>
 
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-        <v-rating
-          :model-value="4.5"
-          color="amber"
-          density="compact"
-          size="small"
-          half-increments
-          readonly
-        ></v-rating>
-
-        <div class="text-grey ms-4">
-          4.5 (413)
-        </div>
-      </v-row>
+      AI is a technology that can be used to solve problems.
+      It is a way of thinking that is based on the idea of
+      "thinking like a computer".
     </v-card-text>
 
     <v-card-actions>
       <v-btn
         color="deep-purple-lighten-2"
         variant="text"
-        @click="reserve"
+        @click="more"
       >
-        Reserve
+        More
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -76,7 +62,7 @@ export default {
   }),
 
   methods: {
-    reserve() {
+    more() {
       this.loading = true;
 
       setTimeout(() => (this.loading = false), 2000);

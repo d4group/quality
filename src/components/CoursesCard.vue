@@ -20,7 +20,7 @@
 	  ></v-img>
   
 	  <v-card-item>
-		<v-card-title>Cources</v-card-title>
+		<v-card-title>Szkolenia IT</v-card-title>
   
 		<v-card-subtitle>
 		  <span class="me-1">Local Favorite</span>
@@ -52,36 +52,23 @@
 		  </div>
 		</v-row>
   
-		<div class="my-4 text-subtitle-1">
-		  $ • Italian, Cafe
-		</div>
+<v-row>
+
+		<div>Odkryj moc technologii z naszymi szkoleniami IT! Nasze kursy, prowadzone przez doświadczonych specjalistów, zapewniają najnowszą wiedzę techniczną. Bez względu na to, czy jesteś nowicjuszem czy doświadczonym profesjonalistą, mamy coś dla Ciebie. Nasze szkolenia IT pomogą Ci zrozumieć złożoność technologii, zwiększyć efektywność i przyspieszyć rozwój kariery. Dołącz do nas i przekształć swoje umiejętności w praktyczne rozwiązania. Zarezerwuj miejsce już dziś!</div>
+</v-row>
   
-		<div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
 	  </v-card-text>
   
 	  <v-divider class="mx-4 mb-1"></v-divider>
   
-	  <v-card-title>Tonight's availability</v-card-title>
-  
-	  <div class="px-4">
-		<v-chip-group v-model="selection">
-		  <v-chip>5:30PM</v-chip>
-  
-		  <v-chip>7:30PM</v-chip>
-  
-		  <v-chip>8:00PM</v-chip>
-  
-		  <v-chip>9:00PM</v-chip>
-		</v-chip-group>
-	  </div>
   
 	  <v-card-actions>
 		<v-btn
 		  color="deep-purple-lighten-2"
 		  variant="text"
-		  @click="reserve"
+		  @click="more"
 		>
-		  Reserve
+		  More
 		</v-btn>
 	  </v-card-actions>
 	</v-card>
@@ -94,7 +81,7 @@
 	  }),
   
 	  methods: {
-		reserve () {
+		more () {
 		  this.loading = true
   
 		  setTimeout(() => (this.loading = false), 2000)
