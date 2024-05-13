@@ -2,7 +2,6 @@
 	<v-card
 	  :loading="loading"
 	  class="mx-auto my-12"
-	  max-width="374"
 	>
 	  <template v-slot:loader="{ isActive }">
 		<v-progress-linear
@@ -22,7 +21,7 @@
 	  <v-card-item>
 		<v-card-title>Język angielski</v-card-title>
   
-		<v-card-subtitle>
+		<!-- <v-card-subtitle>
 		  <span class="me-1">Local Favorite</span>
   
 		  <v-icon
@@ -30,12 +29,13 @@
 			icon="mdi-fire-circle"
 			size="small"
 		  ></v-icon>
-		</v-card-subtitle>
+		</v-card-subtitle> -->
 	  </v-card-item>
   
 	  <v-card-text>
 		<p>			
-			Odkryj świat języka angielskiego z nami! Nasze indywidualne lekcje są dostosowane do Twoich potrzeb. Czy to gramatyka, konwersacje czy przygotowanie do egzaminów – z nami osiągniesz płynność i pewność siebie. Zacznij swoją przygodę z angielskim już dziś i otwórz drzwi do globalnych możliwości. Zapisz się teraz i poczuj różnicę w komunikacji!			
+			Odkryj świat języka angielskiego z nami! Nasze indywidualne lekcje są dostosowane do Twoich potrzeb. Czy to gramatyka, konwersacje czy przygotowanie do egzaminów – z nami osiągniesz płynność i pewność siebie. Zacznij swoją przygodę z angielskim już dziś i otwórz drzwi do globalnych możliwości. 
+			Rozumiemy, jak ważna jest znajomość języka angielskiego w dzisiejszym globalnym świecie. Dlatego oferujemy naukę języka angielskiego dla osób na różnych poziomach zaawansowania. Nasze lekcje są prowadzone przez doświadczonych nauczycieli, którzy pomogą Ci poprawić swoje umiejętności językowe i zwiększyć pewność siebie. Zawsze stawiamy na indywidualne podejście dzięki czemu nauka u nas jest lepsza niż u konkurencji.	Zapisz się teraz i poczuj różnicę!		
 		</p>
 	  </v-card-text>
 
@@ -44,11 +44,11 @@
 	  <v-divider class="mx-4 mb-1"></v-divider>
   
   
-	  <div class="px-4">
+	  <!-- <div class="px-4">
 		<v-chip-group v-model="selection">
 		  <v-chip>5:30PM</v-chip>
 		</v-chip-group>
-	  </div>
+	  </div> -->
   
 	  <v-card-actions>
 		<v-btn
