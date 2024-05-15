@@ -44,6 +44,9 @@
     <v-footer>
       <Footer />
     </v-footer>
+	<div>
+		<Cookies />
+	</div>
   </v-app>
 </template>
 
@@ -59,4 +62,5 @@ import CoursesCard from "./components/CoursesCard.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 import AIoffer from "./components/AIoffer.vue";
+import Cookies from "./components/Cookies.vue";
 </script>
