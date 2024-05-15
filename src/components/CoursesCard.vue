@@ -22,7 +22,7 @@
 	  <v-card-item>
 		<v-card-title>Szkolenia IT</v-card-title>
   
-		<v-card-subtitle>
+		<!-- <v-card-subtitle>
 		  <span class="me-1">Local Favorite</span>
   
 		  <v-icon
@@ -30,11 +30,11 @@
 			icon="mdi-fire-circle"
 			size="small"
 		  ></v-icon>
-		</v-card-subtitle>
+		</v-card-subtitle> -->
 	  </v-card-item>
   
 	  <v-card-text>
-		<v-row
+		<!-- <v-row
 		  align="center"
 		  class="mx-0"
 		>
@@ -50,7 +50,7 @@
 		  <div class="text-grey ms-4">
 			4.5 (413)
 		  </div>
-		</v-row>
+		</v-row> -->
   
 <v-row>
 
@@ -62,7 +62,7 @@
 	  <v-divider class="mx-4 mb-1"></v-divider>
   
   
-	  <v-card-actions>
+	  <!-- <v-card-actions>
 		<v-btn
 		  color="deep-purple-lighten-2"
 		  variant="text"
@@ -70,7 +70,7 @@
 		>
 		  More
 		</v-btn>
-	  </v-card-actions>
+	  </v-card-actions> -->
 	</v-card>
   </template>
   <script>

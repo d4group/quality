@@ -24,16 +24,7 @@
 
     <v-card-item>
       <v-card-title>AI Technology</v-card-title>
-
-      <v-card-subtitle>
-        <span class="me-1">Local Favorite</span>
-
-        <v-icon
-          color="error"
-          icon="mdi-fire-circle"
-          size="small"
-        ></v-icon>
-      </v-card-subtitle>
+			<v-card-subtitle>AI is the new oil</v-card-subtitle>
     </v-card-item>
 
     <v-card-text>
@@ -41,7 +32,7 @@
 		Nasza oferta obejmuje personalizację usług, analizę danych klienta i prognozowanie trendów. Zapewniamy pełne wsparcie techniczne i szkolenia dla pracowników. Wejdź do świata AI, ale tylko z przewodnikiem takim jak my.</p>
     </v-card-text>
 
-    <v-card-actions>
+    <!-- <v-card-actions>
       <v-btn
         color="deep-purple-lighten-2"
         variant="text"
@@ -49,11 +40,12 @@
       >
         More
       </v-btn>
-    </v-card-actions>
+    </v-card-actions> -->
   </v-card>
 </template>
 
 <script>
+
 export default {
   data: () => ({
     loading: false,

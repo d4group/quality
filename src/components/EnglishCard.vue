@@ -51,13 +51,13 @@
 	  </div> -->
   
 	  <v-card-actions>
-		<v-btn
+		<!-- <v-btn
 		  color="deep-purple-lighten-2"
 		  variant="text"
 		  @click="more"
 		>
 		  More
-		</v-btn>
+		</v-btn> -->
 	  </v-card-actions>
 	</v-card>
   </template>
@@ -71,7 +71,6 @@
 	  methods: {
 		more () {
 		  this.loading = true
-  
 		  setTimeout(() => (this.loading = false), 2000)
 		},
 	  },

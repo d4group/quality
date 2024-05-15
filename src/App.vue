@@ -28,6 +28,11 @@
             <CoursesCard />
           </v-col>
         </v-row>
+		<v-row justify="center">
+			<v-col cols="12" xs="12" md="12" xl="12">
+				<AIoffer />
+			</v-col>
+		</v-row>
         <v-row justify="center">
 			<v-col xs="12" md="12" xl="12">
             <h1>Proszę o kontakt</h1>
@@ -53,4 +58,5 @@ import ItCard from "./components/ItCard.vue";
 import CoursesCard from "./components/CoursesCard.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import AIoffer from "./components/AIoffer.vue";
 </script>
