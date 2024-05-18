@@ -25,6 +25,11 @@
         </v-row>
         <v-row justify="center">
 			<v-col xs="12" md="12" xl="12">
+            <AIoffer />
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+			<v-col xs="12" md="12" xl="12">
             <h1>Proszę o kontakt</h1>
             <ContactForm />
           </v-col>
@@ -47,4 +52,5 @@ import ItCard from "./components/ItCard.vue";
 import CoursesCard from "./components/CoursesCard.vue";
 import ContactForm from "./components/ContactForm.vue";
 import Footer from "./components/Footer.vue";
+import AIoffer from "./components/AIoffer.vue";
 </script>
