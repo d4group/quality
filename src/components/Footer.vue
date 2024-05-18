@@ -11,15 +11,16 @@
           </v-col>
           <v-col cols="12">
             <div class="my-2">
-              <v-btn icon class="mx-1 white--text">
-                <v-icon>mdi-facebook</v-icon>
-              </v-btn>
-              <v-btn icon class="mx-1 white--text">
-                <v-icon>mdi-twitter</v-icon>
-              </v-btn>
-              <v-btn icon class="mx-1 white--text">
-                <v-icon>mdi-linkedin</v-icon>
-              </v-btn>
+				<v-btn icon class="mx-1 white--text" href="https://www.facebook.com/profile.php?id=61559008005879" target="_blank">
+					<v-icon>mdi-facebook</v-icon>
+				</v-btn>				
+              
+
+				<v-btn icon class="mx-1 white--text" href="https://www.linkedin.com/company/90861663/admin/feed/posts/" target="_blank">
+					<v-icon>mdi-linkedin</v-icon>					
+				</v-btn>
+
+              
               <v-btn icon class="mx-1 white--text">
                 <v-icon>mdi-instagram</v-icon>
               </v-btn>

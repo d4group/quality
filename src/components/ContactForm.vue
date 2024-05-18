@@ -35,7 +35,7 @@
 		value="1"
 	  ></v-checkbox>
   
-	  <v-btn
+	  <v-btn @click="submit"
 		class="me-4"
 		type="submit"
 	  >
@@ -51,6 +51,7 @@
   <script setup>
   import { ref } from 'vue'
   import { useField, useForm } from 'vee-validate'
+  import axios from 'axios';
 
   const { handleSubmit, handleReset } = useForm({
     validationSchema: {
@@ -64,11 +65,7 @@
 
         return 'Phone number needs to be at least 9 digits.'
       },
-      email (value) {
-        if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true
 
-        return 'Must be a valid e-mail.'
-      },
       select (value) {
         if (value) return true
 
@@ -94,7 +91,20 @@
     'Item 4',
   ])
 
-  const submit = handleSubmit(values => {
-    alert(JSON.stringify(values, null, 2))
-  })
+const submit = handleSubmit(async () => {
+  const formData = {
+    name: name.value,
+    phone: phone.value,
+    email: email.value,
+    select: select.value,
+    checkbox: checkbox.value
+  };
+
+ try {
+    const response = await axios.post('http:/localhost:3000//send-email', formData);
+    alert('E-mail został wysłany pomyślnie.');
+  } catch (error) {
+    alert('Nie udało się wysłać e-maila.');
+  }
+});
 </script>

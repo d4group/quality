@@ -21,16 +21,6 @@
   
 	  <v-card-item>
 		<v-card-title>Usługi IT</v-card-title>
-  
-		<v-card-subtitle>
-		  <span class="me-1">Local Favorite</span>
-  
-		  <v-icon
-			color="error"
-			icon="mdi-fire-circle"
-			size="small"
-		  ></v-icon>
-		</v-card-subtitle>
 	  </v-card-item>
   
 	  <v-card-text>
@@ -42,7 +32,7 @@
   
 	 
   
-	  <v-card-actions>
+	  <!-- <v-card-actions>
 		<v-btn
 		  color="deep-purple-lighten-2"
 		  variant="text"
@@ -50,10 +40,10 @@
 		>
 		  More
 		</v-btn>
-	  </v-card-actions>
+	  </v-card-actions> -->
 	</v-card>
   </template>
-  <script>
+<script>
 	export default {
 	  data: () => ({
 		loading: false,
