@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 //Endpoint POST /send-mail
 app.post('/send-email', async (req, res) => {
-	const { name, phone, email, select, checkbox } = req.body;
+	const { name, phone, email, select, checkbox, textarea } = req.body;
 	console.log('Otrzymane dane:', req.body);
 
 	// Konfiguracja transportu dla nodemailer
@@ -24,7 +24,7 @@ app.post('/send-email', async (req, res) => {
 		secure: true,
 		auth: {
 			user: 'contact@d4quality.pl', // Zastąp to swoim adresem e-mail
-			pass: 'Tomazino2' // Zastąp to swoim hasłem
+			pass: 'haslo' // Zastąp to swoim hasłem
 		}
 	});
 
@@ -33,7 +33,7 @@ app.post('/send-email', async (req, res) => {
 		from: 'contact@d4quality.pl',
 		to: 'contact@d4quality.pl', // Adres e-mail odbiorcy - moj adres e-mail z formularza
 		subject: `Nowa wiadomość od ${req.body.name}`,
-		text: `Telefon: ${req.body.phone}\nE-mail: ${req.body.email}\nWybrana opcja: ${req.body.select}\nZaznaczone: ${req.body.checkbox}`
+		text: `Telefon: ${req.body.phone}\nE-mail: ${req.body.email}\nWybrana opcja: ${req.body.select}\nZaznaczone: ${req.body.checkbox}\nTreść wiadomości:\n\n${req.body.textarea}`
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
@@ -44,23 +44,6 @@ app.post('/send-email', async (req, res) => {
 		res.status(200).send('E-mail został wysłany pomyślnie.');
 	});
 });
-
-// app.post('/send-email', (req, res) => {
-// 	const { name, phone, email, select, checkbox } = req.body;
-// 	const mailOptions = {
-// 		from: req.body.email,
-// 		to: 'testowe@borowik.pro', // Adres e-mail odbiorcy
-// 		subject: `Nowa wiadomość od ${req.body.name}`,
-// 		text: `Telefon: ${req.body.phone}\nE-mail: ${req.body.email}\nWybrana opcja: ${req.body.select}\nZaznaczone: ${req.body.checkbox}`
-// 	};
-// 	console.log(req.body);
-// 	transporter.sendMail(mailOptions, (error, info) => {
-// 		if (error) {
-// 			return res.status(500).send('Nie udało się wysłać e-maila');
-// 		}
-// 		res.status(200).send('E-mail został wysłany pomyślnie.');
-// 	});
-// });
 
 
 // Uruchomienie serwera

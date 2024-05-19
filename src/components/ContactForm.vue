@@ -32,6 +32,18 @@
 		name="select"
 		label="Select"
 	  ></v-select>
+
+	  <v-textarea 
+	  v-model="textarea.value.value"
+		:error-messages="textarea.errorMessage.value"
+		:counter="100"
+		:rows="5"
+		:cols="50"
+		:auto-grow-on-input="true"
+	  label="Label" 
+	  variant="outlined"
+	  name="message"
+	  ></v-textarea>
   
 	  <v-checkbox
 		v-model="checkbox.value.value"
@@ -73,12 +85,14 @@ const phone = useField('phone')
 const email = useField('email')
 const select = useField('select')
 const checkbox = useField('checkbox')
+const textarea = useField('message')
 
 const items = ref([
-  'Item 1',
-  'Item 2',
-  'Item 3',
-  'Item 4',
+  'AI',
+  'Lekcje angielskiego',
+  'Usługi IT',
+  'Szkolenia',
+  'Inne'
 ])
 
 const submit = handleSubmit(async () => {
@@ -87,7 +101,8 @@ const submit = handleSubmit(async () => {
     phone: phone.value.value,
     email: email.value.value,
     select: select.value.value,
-    checkbox: checkbox.value.value
+    checkbox: checkbox.value.value,
+	textarea: textarea.value.value
   };
 
   console.log(formData);
