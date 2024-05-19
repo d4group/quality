@@ -1,9 +1,12 @@
 <template>
+		<div>
 	<form @submit.prevent="submit">
+		
 	  <v-text-field
 		v-model="name.value.value"
 		:counter="10"
 		:error-messages="name.errorMessage.value"
+		name="name"
 		label="Name"
 	  ></v-text-field>
   
@@ -12,18 +15,21 @@
 		:counter="7"
 		:error-messages="phone.errorMessage.value"
 		label="Phone Number"
+		name="phone"
 	  ></v-text-field>
   
 	  <v-text-field
 		v-model="email.value.value"
 		:error-messages="email.errorMessage.value"
 		label="E-mail"
+		name="email"
 	  ></v-text-field>
   
 	  <v-select
 		v-model="select.value.value"
 		:error-messages="select.errorMessage.value"
 		:items="items"
+		name="select"
 		label="Select"
 	  ></v-select>
   
@@ -31,6 +37,7 @@
 		v-model="checkbox.value.value"
 		:error-messages="checkbox.errorMessage.value"
 		label="Option"
+		name="checkbox"
 		type="checkbox"
 		value="1"
 	  ></v-checkbox>
@@ -46,65 +53,52 @@
 		clear
 	  </v-btn>
 	</form>
+
+
+
+	</div>
   </template>
 
-  <script setup>
-  import { ref } from 'vue'
-  import { useField, useForm } from 'vee-validate'
-  import axios from 'axios';
 
-  const { handleSubmit, handleReset } = useForm({
-    validationSchema: {
-      name (value) {
-        if (value?.length >= 2) return true
+<script setup>
+import { ref } from 'vue'
+import { useField, useForm } from 'vee-validate'
+import axios from 'axios';
 
-        return 'Name needs to be at least 2 characters.'
-      },
-      phone (value) {
-        if (value?.length > 9 && /[0-9-]+/.test(value)) return true
+const { handleSubmit, handleReset } = useForm({
+  // ...
+})
+const name = useField('name')
+const phone = useField('phone')
+const email = useField('email')
+const select = useField('select')
+const checkbox = useField('checkbox')
 
-        return 'Phone number needs to be at least 9 digits.'
-      },
-
-      select (value) {
-        if (value) return true
-
-        return 'Select an item.'
-      },
-      checkbox (value) {
-        if (value === '1') return true
-
-        return 'Must be checked.'
-      },
-    },
-  })
-  const name = useField('name')
-  const phone = useField('phone')
-  const email = useField('email')
-  const select = useField('select')
-  const checkbox = useField('checkbox')
-
-  const items = ref([
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-  ])
+const items = ref([
+  'Item 1',
+  'Item 2',
+  'Item 3',
+  'Item 4',
+])
 
 const submit = handleSubmit(async () => {
   const formData = {
-    name: name.value,
-    phone: phone.value,
-    email: email.value,
-    select: select.value,
-    checkbox: checkbox.value
+    name: name.value.value,
+    phone: phone.value.value,
+    email: email.value.value,
+    select: select.value.value,
+    checkbox: checkbox.value.value
   };
 
- try {
-    const response = await axios.post('http:/localhost:3000//send-email', formData);
-    alert('E-mail został wysłany pomyślnie.');
-  } catch (error) {
-    alert('Nie udało się wysłać e-maila.');
-  }
+  console.log(formData);
+
+  // Użyj axios do wysłania danych formularza do serwera
+  axios.post('http://localhost:3000/send-email', formData)
+  .then(response => {
+    console.log('Sukces:', response.data);
+  })
+  .catch((error) => {
+    console.error('Błąd:', error);
+  });
 });
 </script>
